@@ -1,2 +1,2 @@
 # dev-rails
-Bash script for setting up rails enviroment
+Setting up rails enviroment

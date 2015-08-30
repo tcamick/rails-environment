@@ -1,23 +1,24 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-sudo apt-get update sudo apt-get upgrade
+apt-get update
+apt-get upgrade
 
 #Add apt repositories
 
-sudo apt-get install software-properties-common
-sudo apt-add-repository ppa:brightbox/ruby-ng
-sudo apt-get update
+apt-get install software-properties-common
+apt-add-repository ppa:brightbox/ruby-ng
+apt-get update
 
-sudo apt-get install ruby2.2 ruby2.2-dev
-sudo apt-get install ruby-switch
-sudo apt-get install bundler
-sudo ruby-switch --set ruby2.2
+apt-get install ruby2.2 ruby2.2-dev
+apt-get install ruby-switch
+apt-get install bundler
+ruby-switch --set ruby2.2
 ruby -v
 
 #Install Other Dependencies
 
-sudo apt-get update
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+apt-get update
+apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 
 #Install MySQL
 
@@ -30,7 +31,6 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 #sudo apt-get update
 #sudo apt-get upgrade
 #sudo apt-get install postgresql-9.4 postgresql-common
-
 
 #Install Rails
 gem install rails

@@ -10,6 +10,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.provision :shell, path: "bash_rails.sh"
   config.vm.network "forwarded_port", guest: 3030, host: 3030
+   config.vm.synced_folder "src/", "/home/vagrant/src"
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
 

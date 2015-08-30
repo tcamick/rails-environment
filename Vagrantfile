@@ -11,7 +11,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: "bash_rails.sh"
   config.ssh.username = "rails"
   config.vm.network "forwarded_port", guest: 3000, host: 3000
-  config.vm.synced_folder ".projects", "/home/tcamick/projects"
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
 

@@ -5,20 +5,20 @@ apt-get upgrade
 
 #Add apt repositories
 
-apt-get install software-properties-common
+apt-get --yes --force-yes install software-properties-common
 apt-add-repository ppa:brightbox/ruby-ng
 apt-get update
 
-apt-get install ruby2.2 ruby2.2-dev -y
-apt-get install ruby-switch -y
-apt-get install bundler  -y
+apt-get --yes --force-yes install ruby2.2 ruby2.2-dev 
+apt-get --yes --force-yes install ruby-switch 
+apt-get --yes --force-yes install bundler  
 ruby-switch --set ruby2.2
 ruby -v
 
 #Install Other Dependencies
 
 apt-get update
-apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev  -y
+apt-get --yes --force-yes install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev  -y
  
 #Install MySQL
 

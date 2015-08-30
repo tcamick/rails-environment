@@ -7,6 +7,15 @@
 # you're doing.
 Vagrant.configure(2) do |config|
 
+
+  ######################################
+  ######Useful configs #################
+  ######################################
+  #config.vm.box       = "treehouse-rails4"
+  #config.vm.box_url   = "http://vm.teamtreehouse.com/treehouse-rails4.box"
+  #config.ssh.username = "treehouse"
+  ####### End Useful configs ############
+  
   config.vm.box = "ubuntu/trusty64"
   config.vm.provision :shell, path: "bash_rails.sh"
   config.vm.network "forwarded_port", guest: 3030, host: 3030

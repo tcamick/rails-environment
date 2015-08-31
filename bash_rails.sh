@@ -24,7 +24,8 @@ apt-get --yes --force-yes install git-core curl zlib1g-dev build-essential libss
 
 #sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 
-#Install PostgreSQL
+#Install PostgreSQL 
+# This is the DB OpenFoodNetwork Uses.
 
 #sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 #sudo apt-get install wget ca-certificates

@@ -1,7 +1,6 @@
 #!/bin/bash -eux
 
 echo "Installing Virtualbox Guest Utils"
-apt-get -y remove dkms build-essential linux-headers-*
 apt-get -y install dkms build-essential linux-headers-$(uname -r)
 VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
 mount -o loop ~/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt

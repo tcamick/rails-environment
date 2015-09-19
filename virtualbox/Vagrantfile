@@ -11,12 +11,12 @@ Vagrant.configure(2) do |config|
   ######################################
   ######Useful configs #################
   ######################################
-  #config.vm.box       = "treehouse-rails4"
-  #config.vm.box_url   = "http://vm.teamtreehouse.com/treehouse-rails4.box"
-  #config.ssh.username = "treehouse"
+  #config.vm.box       = ""
+  #config.vm.box_url   = ""
+  #config.ssh.username = ""
   ####### End Useful configs ############
 
-  config.vm.box = "dev-rails"
+  config.vm.box = "personal-website"
   config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.synced_folder "src/", "/home/vagrant/src"
   # Create a private network, which allows host-only access to the machine

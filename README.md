@@ -1,7 +1,7 @@
-# gitlab-vm
+# Rails Enviroment for Personal Website
 
 ```
-A repository for setting up a rails enviroment for personal website
+A repository for setting up a rails enviroment for my personal website.
 ```
 
 ## Requirements

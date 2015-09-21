@@ -1,7 +1,7 @@
-# Personal Website
+# Personal Website Enviroment
 
 ```
-A repository for the base configuration of my personal website. This is currently a work in progress.
+A repository for the base configuration of my personal websites server enviroment.
 ```
 
 ## Requirements

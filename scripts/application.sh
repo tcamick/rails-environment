@@ -22,7 +22,7 @@ apt-get --yes --force-yes install git-core curl zlib1g-dev build-essential libss
  
 #Install MySQL
 
-#sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 
 #Install PostgreSQL 
 # This is the DB OpenFoodNetwork Uses.

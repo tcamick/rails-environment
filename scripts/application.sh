@@ -18,11 +18,11 @@ ruby -v
 #Install Other Dependencies
 
 apt-get update
-apt-get --yes --force-yes install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs  -y
+apt-get --yes --force-yes install vim git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs  -y
  
 #Install MySQL
 
-sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev -y
 
 #Install PostgreSQL 
 # This is the DB OpenFoodNetwork Uses.

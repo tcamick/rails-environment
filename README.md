@@ -1,7 +1,7 @@
-# Personal Website Environment
+# Rails Environment
 
 ```
-A repository for the base configuration of my personal websites server environment.
+A repository for the base configuration of a rails environment.
 ```
 
 ## Requirements

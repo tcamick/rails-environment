@@ -35,17 +35,3 @@ sudo apt-get install mysql-server mysql-client libmysqlclient-dev -y
 
 #Install Rails
 gem install rails
-
-#I don't think it's a bad idea to run the following manually
-#gem install passenger
-#rvmsudo passenger-install-nginx-module
-
-#Edit /opt/nginx/conf/nginx.conf
-#To look something like this
-
-#server {
-#listen 80;
-#server_name example.com;
-#passenger_enabled on;
-#root /var/www/amickglass/public;
-#}

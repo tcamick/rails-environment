@@ -3,35 +3,43 @@
 apt-get update
 apt-get upgrade
 
-#Add apt repositories
 
-apt-get --yes --force-yes install software-properties-common
-apt-add-repository ppa:brightbox/ruby-ng
-apt-get update
+sudo apt-get update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+sudo apt-get install apache2
 
-apt-get --yes --force-yes install ruby2.2 ruby2.2-dev
-apt-get --yes --force-yes install ruby-switch
-apt-get --yes --force-yes install bundler
-ruby-switch --set ruby2.2
+#install ruby
+sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+curl -L https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm install 2.2.3
+rvm use 2.2.3 --default
 ruby -v
 
-#Install Other Dependencies
+#
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+gem install bundler
 
-apt-get update
-apt-get --yes --force-yes install vim git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs  -y
+# Install our PGP key and add HTTPS support for APT
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
+sudo apt-get install -y apt-transport-https ca-certificates
 
-#Install MySQL
+# Add our APT repository
+sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main > /etc/apt/sources.list.d/passenger.list'
+sudo apt-get update
 
-sudo apt-get install mysql-server mysql-client libmysqlclient-dev -y
+# Install Passenger + Apache module
+sudo apt-get install -y libapache2-mod-passenger
 
-#Install PostgreSQL
-# This is the DB OpenFoodNetwork Uses.
+#enable passenger module and restart
+sudo a2enmod passenger
+sudo apache2ctl restart
 
-#sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-#sudo apt-get install wget ca-certificates
-#sudo apt-get update
-#sudo apt-get upgrade
-#sudo apt-get install postgresql-9.4 postgresql-common
+#validate-install
+sudo passenger-config validate-install
 
-#Install Rails
-gem install rails
+sudo apt-get install nodejs
+
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+
+gem install rails -v 4.2.4

@@ -11,6 +11,7 @@ apt-get update
 
 apt-get --yes --force-yes install ruby2.2 ruby2.2-dev
 apt-get --yes --force-yes install ruby-switch
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 apt-get --yes --force-yes install bundler
 ruby-switch --set ruby2.2
 ruby -v
@@ -19,6 +20,7 @@ ruby -v
 
 apt-get update
 apt-get --yes --force-yes install vim git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs  -y
+sudo apt-get install apache2 -y
 
 #Install MySQL
 

@@ -31,6 +31,10 @@ sudo apt-get install -y libapache2-mod-passenger
 sudo a2enmod passenger
 sudo apache2ctl restart
 
+#create a new symlink to the correct Ruby binary file
+sudo rm /usr/bin/ruby
+sudo ln -s /usr/local/bin/ruby /usr/bin/ruby
+
 #validate-install
 sudo passenger-config validate-install
 
@@ -40,7 +44,7 @@ apt-get --yes --force-yes install vim git-core curl zlib1g-dev build-essential l
 sudo apt-get install apache2 -y
 
 #Install MySQL
-
+create a new symlink to the correct Ruby binary file
 sudo apt-get install mysql-server mysql-client libmysqlclient-dev -y
 
 #Install Rails

@@ -3,6 +3,7 @@
 * [Vagrant](http://vagrantup.com)
 
 #Just a reminder
-mv ./scripts ./virtualbox/src/
+mkdir ./virtualbox/src/
+mv ./setup_scripts ./virtualbox/src/
 
 cd vagrant && vagrant up
